@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1463318388 source:d:\sr\i2p\i2p2015\i2p2015-2\materials\midtermii\hwsformidtermii\binary search trees using polymorphism\code\function.cpp
+	"function.h"
+	<math.h>
+
+1463323348 d:\sr\i2p\i2p2015\i2p2015-2\materials\midtermii\hwsformidtermii\binary search trees using polymorphism\code\function.h
+	<iostream>
+	<math.h>
+
+1463311746 source:d:\sr\i2p\i2p2015\i2p2015-2\materials\midtermii\hwsformidtermii\binary search trees using polymorphism\code\main.cpp
+	<iostream>
+	<string.h>
+	"function.h"
+

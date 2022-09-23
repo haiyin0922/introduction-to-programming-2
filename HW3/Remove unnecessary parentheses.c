@@ -1,0 +1,121 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#define MAXEXPR 256
+#define NUMSYM 6
+
+char expr[MAXEXPR];  // string to store the input expression.
+int pos;             // current position of parsing, from end to start
+
+typedef enum {ID_A, ID_B, ID_C, ID_D, OP_AND, OP_OR} TokenSet;
+char sym[NUMSYM];
+
+typedef struct _Node {
+    TokenSet data;
+    struct _Node *left, *right;
+} BTNode;
+
+BTNode* EXPR();
+BTNode* FACTOR();
+BTNode* makeNode(char c);
+void freeTree(BTNode *root);
+void printInfix(BTNode *root);
+
+int main(void){
+    sym[0]='A';
+    sym[1]='B';
+    sym[2]='C';
+    sym[3]='D';
+    sym[4]='&';
+    sym[5]='|';
+    	
+	scanf("%s", expr);
+    pos = strlen(expr) - 1;
+    BTNode *root = EXPR();
+    printInfix(root);
+    freeTree(root);
+
+    return 0;
+}
+
+BTNode* EXPR() // parse an infix expression and generate a syntax tree
+{
+    char c; 
+    BTNode *node = NULL, *right=NULL;
+    
+	if (pos>=0) {   // if the expression has length > 1.
+        right = FACTOR();
+        if (pos>0) {             // 1. the EXPR OP ID case
+			c = expr[pos];
+            if (c=='&' || c=='|'){
+                node = makeNode(c);
+                node->right = right;
+                pos--;
+                node->left = EXPR();
+            }
+			else node = right; // 2. EXPR = ID
+        }
+		else node = right;    // 2. EXPR = ID
+    }
+    return node;
+}
+ 
+BTNode* FACTOR() // use the parse grammar FACTOR = ID | (EXPR) to deal with parentheses
+{
+    char c;
+    BTNode *node = NULL;
+    
+	c = expr[pos--];
+	if (c>= 'A' && c<='D'){// factor = ID
+       node = makeNode(c);
+    }
+	else if (c==')') {   // factor = (EXPR)
+        node = EXPR();
+        pos--;
+    }
+        
+    return node;
+}
+
+BTNode* makeNode(char c)  // create a node without any child
+{
+    int i;
+    BTNode *node = (BTNode*) malloc(sizeof(BTNode));
+
+    for(i=0; i<NUMSYM; i++)
+        if(c==sym[i]){ 
+            node->data = i;
+        	break;
+        }
+    node->left = NULL;
+    node->right = NULL;
+
+    return node;
+}
+
+/* print a tree by in-order. */
+void printInfix(BTNode *root)
+{
+	if (root->left!=NULL) {
+		printInfix(root->left);
+	}
+	printf("%c", sym[root->data]);
+	if((sym[root->data]=='&'||sym[root->data]=='|') && (sym[root->right->data]=='&'||sym[root->right->data]=='|'))
+		printf("(");
+	if (root->right!=NULL){
+        printInfix(root->right);
+    }
+    if((sym[root->data]=='&'||sym[root->data]=='|') && (sym[root->right->data]=='&'||sym[root->right->data]=='|'))
+		printf(")");
+		
+	return;
+}
+
+/* clean a tree.*/
+void freeTree(BTNode *root){
+    if (root!=NULL) {
+        freeTree(root->left);
+        freeTree(root->right);
+        free(root);
+    }
+}

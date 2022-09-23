@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1459528355 source:c:\users\shhuang\desktop\miniproject-parser\miniproject parser\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1490328061 source:c:\users\yuju\desktop\miniproject parser\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

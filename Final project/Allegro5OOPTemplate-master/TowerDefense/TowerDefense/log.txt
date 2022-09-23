@@ -1,0 +1,64 @@
+[INFO] Game Initializing...
+[INFO] Loaded Resource<image>: resources/images/icon.png
+[INFO] Loaded window icon from: icon.png
+[INFO] There are total 5 supported mouse buttons
+[INFO] Allegro5 initialized
+[INFO] Game begin
+[INFO] Loaded Resource<image>: resources/images/win/enter.png scaled to 1200x604
+[INFO] Loaded Resource<image>: resources/images/win/enter.png
+[INFO] Loaded Resource<audio>: resources/audios/opening.wav
+[INFO] Game initialized
+[INFO] Game start event loop
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<audio>
+[INFO] Loaded Resource<audio>: resources/audios/don.wav
+[INFO] Loaded Resource<image>: resources/images/stage-select/choose.png scaled to 1200x604
+[INFO] Loaded Resource<image>: resources/images/stage-select/easy.png scaled to 70x380
+[INFO] Loaded Resource<image>: resources/images/stage-select/easy.png
+[INFO] Loaded Resource<image>: resources/images/stage-select/easy-2.png
+[INFO] Loaded Resource<image>: resources/images/stage-select/normal.png scaled to 70x380
+[INFO] Loaded Resource<image>: resources/images/stage-select/normal.png
+[INFO] Loaded Resource<image>: resources/images/stage-select/normal-2.png
+[INFO] Loaded Resource<image>: resources/images/stage-select/hard.png scaled to 70x380
+[INFO] Loaded Resource<image>: resources/images/stage-select/hard.png
+[INFO] Loaded Resource<image>: resources/images/stage-select/hard-2.png
+[INFO] Loaded Resource<audio>: resources/audios/choose.wav
+[INFO] Changed to stage-select scene
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<audio>
+[INFO] Destroyed Resource<audio>
+[INFO] Loaded Resource<audio>: resources/audios/don.wav
+[INFO] Loaded Resource<image>: resources/images/play/sky.png scaled to 1200x604
+[INFO] Loaded Resource<font>: resources/fonts/pirulen.ttf with size 30
+[INFO] Loaded Resource<audio>: resources/audios/sky.wav
+[INFO] Changed to play scene
+[INFO] Loaded Resource<image>: resources/images/play/face2.png scaled to 85x100
+[INFO] Loaded Resource<image>: resources/images/play/face1.png scaled to 85x100
+[INFO] Loaded Resource<image>: resources/images/play/red-small.png
+[INFO] Loaded Resource<image>: resources/images/play/blue-small.png
+[INFO] Loaded Resource<image>: resources/images/play/blue-big.png
+[INFO] Loaded Resource<image>: resources/images/play/red-big.png
+[INFO] Game Terminating...
+[INFO] Game terminated
+[INFO] Game end
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<image>
+[INFO] Destroyed Resource<font>
+[INFO] Destroyed Resource<audio>
+[INFO] Destroyed Resource<audio>
